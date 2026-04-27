@@ -1,0 +1,136 @@
+/* HOME SECTION START */
+.home {
+  width: 100%;
+  height: 350px; /* better than fixed height */
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 230px;
+}
+
+.home .content {
+  text-align: center;
+  max-width: 900px;
+}
+
+
+/* Main Heading */
+.home .content h1 {
+  color: white;
+  font-size: 60px;
+  font-weight: 600;
+  text-shadow: 0px 1px 12px rgb(0, 0, 0);
+  margin-top: 40px;
+  line-height: 1.2;
+}
+
+/* Animated Text */
+.changecontent::after {
+  content: '';
+  color: orange;
+  text-shadow: 0px 1px 1px black;
+  animation: changetext 4s infinite linear;
+}
+
+@keyframes changetext {
+  0% { content: "HTML"; }
+  10% { content: "CSS"; }
+  20% { content: "JavaScript"; }
+  30% { content: "Python"; }
+  40% { content: "ReactJS"; }
+  50% { content: "Node.js"; }
+  60% { content: "Next.js"; }
+  80% { content: "Django"; }
+  90% { content: "MongoDB"; }
+  100% { content: "MySQL"; }
+}
+
+/* Paragraph */
+.home .content p {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  text-shadow: 0px 1px 12px black;
+  margin: 30px 0 50px;
+}
+
+/* Button */
+.home .content a {
+  padding: 12px 20px;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  letter-spacing: 2px;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.home .content a:hover {
+  background-color: orange;
+  color: white;
+}
+.changecontent::after {
+  content: '';
+  color: orange;
+  text-shadow: 0px 1px 1px black;
+  animation: changetext 4s infinite linear;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .home {
+    margin-top: 70px;
+  }
+
+  .home .content h1 {
+    font-size: 45px;
+    margin-top: -100px;
+  }
+
+  .home .content h5 {
+    font-size: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .home {
+    margin-top: 80px;
+    padding: 15px;
+  }
+
+  .home .content h1 {
+    font-size: 32px;
+  }
+
+  .home .content h5 {
+    font-size: 20px;
+  }
+
+  .home .content p {
+    font-size: 14px;
+  }
+
+  .home .content a {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 360px) {
+  .home .content h1 {
+    font-size: 26px;
+  }
+}
+/* HOME SECTION END */

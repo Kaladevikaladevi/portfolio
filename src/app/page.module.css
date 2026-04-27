@@ -1,0 +1,110 @@
+.container {
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  gap: 1px;
+  text-align: center;
+}
+
+/* MERN IMAGE */
+/* .mernImg {
+  width: 150px;
+  height: auto;
+  animation: float 3s ease-in-out infinite;
+  margin-top: 9px;
+} */
+
+/* NAME */
+.name {
+  font-size: 210px;
+  font-weight: 900;
+  letter-spacing: 6px;
+  margin-top: -20px;
+}
+
+/* PROFILE IMAGE */
+.profileImg {
+  width: 450px;
+  height: auto;
+ margin-top: -160px;
+
+ 
+}
+
+
+/* ROLE SECTION */
+.role_open {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 640px;        /* reduced from 100 (too much space) */
+  margin-top: -350px;
+}
+
+.role {
+  color: #ffffff;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.open {
+  color: rgb(255, 255, 255);    /* better highlight */
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* DOTS */
+.dots {
+  display: flex;
+  justify-content: center;   /* center both */
+  gap: 1000px;                /* NOW it works */
+  color: orange;
+  font-size: 24px;
+    margin-top: 50px;
+}
+
+
+
+/* FLOAT ANIMATION */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@media (max-width: 768px) {
+  .container{
+    width: 640px;
+    margin-top: 100px;
+  }
+
+
+  .name {
+    font-size: 120px !important; /* force override */
+  }
+
+  .profileImg{
+    width: 550px;
+  }
+
+  .role_open {
+    flex-direction: column !important;
+    gap: 20px !important;
+    margin-top: 10px;
+  }
+
+  .dots {
+    gap: 0px !important;   /* FIXED */
+    font-size: 16px;
+  }
+}

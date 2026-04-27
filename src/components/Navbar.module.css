@@ -1,0 +1,135 @@
+/* Navbar */
+.navbar {
+  width: 100%;
+  background: #000000;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgb(255, 136, 1);
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #ff9100;
+}
+
+.logo:hover {
+  color: rgb(255, 255, 255);
+}
+
+/* Menu */
+.navMenu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+/* Links */
+.navMenu li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* Hover effect */
+.navMenu li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: orange;
+  transition: 0.3s ease;
+}
+
+.navMenu li a:hover {
+  color: orange;
+}
+
+.navMenu li a:hover::after {
+  width: 100%;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 1100;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  transition: 0.3s;
+}
+
+/* Animation */
+.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 800px) {
+
+  .hamburger {
+    display: flex;
+    background-color: #ff9100;
+
+  }
+  .navbar{
+    width: 622px;
+    
+  }
+
+  .navMenu {
+    position: fixed;   /* better than absolute */
+    top: 60px;
+    right: -100%;      /* ✅ hidden initially */
+    width: 650px;      /* you can control width now */
+    height:350px;
+    background: #000000a2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    transition: right 0.4s ease;
+  }
+
+  .show {
+    right: 222;          /* ✅ slides in */
+  }
+
+  .navMenu li a {
+    font-size: 20px;
+  }
+}

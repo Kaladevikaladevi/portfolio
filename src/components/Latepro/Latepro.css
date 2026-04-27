@@ -1,0 +1,153 @@
+.latepro-container {
+  background: #000;
+  color: #fff;
+  padding: 60px 8%;
+}
+
+/* LAYOUT */
+.latepro-content-row {
+  display: flex;
+  gap: 40px;
+}
+
+.featured-image-wrapper {
+  flex: 1;
+  height: 420px;
+}
+
+.text-area {
+  flex: 1.2;
+}
+
+.text-area h1 {
+  font-size: clamp(24px, 5vw, 48px);
+}
+
+.text-area p {
+  margin-top: 16px;
+  color: #bbb;
+  line-height: 1.7;
+}
+
+/* CARD BASE */
+.featured-card,
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid #1f1f1f;
+  transition: all 0.3s ease;
+}
+
+/* 🔥 GLOW EFFECT */
+.featured-card:hover,
+.project-card:hover {
+  border-color: orange;
+  box-shadow: 0 0 25px rgba(255, 165, 0, 0.25);
+}
+
+/* IMAGE */
+.featured-img,
+.project-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* IMAGE WRAPPER */
+.project-img-wrapper {
+  height: 260px;
+  overflow: hidden;
+}
+
+/* OVERLAY */
+.overlay,
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  opacity: 0;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+/* ✨ SLIDE EFFECT */
+.overlay h3,
+.overlay p,
+.project-overlay h3,
+.project-overlay p {
+  transform: translateY(20px);
+  transition: 0.4s ease;
+}
+
+.featured-card:hover .overlay,
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.featured-card:hover .overlay h3,
+.featured-card:hover .overlay p,
+.project-card:hover .project-overlay h3,
+.project-card:hover .project-overlay p {
+  transform: translateY(0);
+}
+
+/* GRID */
+.project-grid {
+  margin-top: 64px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+/* BUTTON */
+.live-btn {
+  margin-top: 12px;
+  padding: 8px 14px;
+  background: orange;
+  color: black;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.live-btn:hover {
+  background: #ff8800;
+  transform: scale(1.05);
+}
+
+/* DOTS */
+.dots {
+  margin-top: 20px;
+  display: flex;
+  gap: 8px;
+}
+
+.dots span {
+  width: 8px;
+  height: 8px;
+  background: orange;
+  border-radius: 50%;
+}
+
+/* MOBILE FIX */
+@media (hover: none) {
+  .overlay,
+  .project-overlay {
+    opacity: 1;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .latepro-content-row {
+    flex-direction: column;
+  }
+
+  .featured-image-wrapper {
+    height: 280px;
+  }
+}
