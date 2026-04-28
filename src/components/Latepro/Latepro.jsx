@@ -69,7 +69,7 @@ const Latepro = () => {
                   src={featuredProject.img}
                   alt={featuredProject.title}
                   className="featured-img"
-                  whileHover={{ scale: 1.08 }}
+                  whileHover={{ scale: 1 }}
                   transition={{ duration: 0.5 }}
                 />
 
@@ -107,12 +107,7 @@ const Latepro = () => {
 
           </div>
 
-          <div className="dots">
-            {[...Array(5)].map((_, i) => (
-              <span key={i} />
-            ))}
-          </div>
-
+       
         </motion.div>
       </div>
 

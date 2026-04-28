@@ -1,3 +1,5 @@
+"use client";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./page.module.css";
 import "./globals.css"
@@ -27,7 +29,7 @@ export default function Home() {
             ringRadius={7}
             waveSpeed={0.4}
             waveAmplitude={1} 
-            particleSize={1.5}
+            particleSize={0.5}
             lerpSpeed={0.05}
             color="#ff7a00"
             autoAnimate
