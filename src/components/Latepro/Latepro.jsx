@@ -1,32 +1,32 @@
 "use client";
-import './Latepro.css';
+
+import "./Latepro.css";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const projects = [
   {
-    title: "AI-Powered Developer Portfolio Builder (Work in Progress)",
-    desc: "A modern portfolio builder powered by Antigravity AI...",
+    title: "AI Portfolio Builder",
+    desc: "Modern portfolio builder powered by AI.",
     img: "/mernpic.png",
   },
   {
     title: "MERN CRUD App",
-    desc: "Simple CRUD application using MERN stack.",
+    desc: "CRUD app using MERN stack.",
     img: "/CRUD.png",
-    live: "https://client-31s7.vercel.app/"
+    live: "https://client-31s7.vercel.app/",
   },
   {
-    title: "MERN Stack E-Commerce Platform (Work in Progress)",
-    desc: "Full-featured e-commerce platform with Razorpay...",
+    title: "E-Commerce Platform",
+    desc: "Full-featured e-commerce app.",
     img: "/ecommerce.png",
-  }
+  },
 ];
 
 const container = {
   hidden: {},
   show: {
-    transition: {
-      staggerChildren: 0.15,
-    },
+    transition: { staggerChildren: 0.15 },
   },
 };
 
@@ -35,58 +35,45 @@ const fadeUp = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: "easeOut" }
+    transition: { duration: 0.7 },
   },
 };
 
-const Latepro = () => {
-
+export default function Latepro() {
   const featuredProject = projects[0];
   const gridProjects = projects.slice(1);
 
   return (
     <div className="latepro-container">
 
-      <div className="latepro-top">
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="latepro-left"
-        >
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        className="latepro-left"
+      >
 
-          <div className="latepro-content-row">
+        <div className="latepro-content-row">
 
-            {/* FEATURED */}
-            <div className="featured-image-wrapper">
-              <motion.div
-                variants={fadeUp}
-                whileHover={{ y: 8 }}
-                className="featured-card"
-              >
-                <motion.img
-                  src={featuredProject.img}
-                  alt={featuredProject.title}
-                  className="featured-img"
-                  whileHover={{ scale: 11 }}
-                  transition={{ duration: 0.5 }}
-                />
+          {/* FEATURED */}
+          <motion.div variants={fadeUp} className="featured-card">
+            <Image
+              src={featuredProject.img}
+              alt={featuredProject.title}
+              width={500}
+              height={300}
+              className="featured-img"
+            />
 
-                <div className="overlay">
-                  <motion.h3 initial={{ y: 20, opacity: 0 }} whileHover={{ y: 0, opacity: 1 }}>
-                    {featuredProject.title}
-                  </motion.h3>
-                  <motion.p initial={{ y: 20, opacity: 0 }} whileHover={{ y: 0, opacity: 1 }}>
-                    {featuredProject.desc}
-                  </motion.p>
-                </div>
-              </motion.div>
+            <div className="overlay">
+              <h3>{featuredProject.title}</h3>
+              <p>{featuredProject.desc}</p>
             </div>
+          </motion.div>
 
-            {/* TEXT */}
-            <motion.div variants={fadeUp} className="text-area">
-              <h1>𝐌𝐘 𝐋𝐀𝐓𝐄𝐒𝐓 <br />𝐏𝐑𝐎𝐉𝐄𝐂𝐓</h1>
+          {/* TEXT */}
+          <motion.div variants={fadeUp} className="text-area">
+           <h1>𝐌𝐘 𝐋𝐀𝐓𝐄𝐒𝐓 <br />𝐏𝐑𝐎𝐉𝐄𝐂𝐓</h1>
 
               <p>
                 I design and build modern, scalable web applications with a strong focus on performance, usability, and clean architecture.
@@ -103,60 +90,46 @@ const Latepro = () => {
                 ✦ <b>MERN CRUD Application</b> ⚙️<br />
                 A responsive CRUD system with REST APIs.
               </p>
-            </motion.div>
+          </motion.div>
 
-          </div>
+        </div>
 
-       
-        </motion.div>
-      </div>
+      </motion.div>
 
       {/* GRID */}
       <motion.div
         variants={container}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true }}
         className="project-grid"
       >
         {gridProjects.map((project, index) => (
           <motion.div
-            key={index}
+            key={`${project.title}-${index}`}
             variants={fadeUp}
-            whileHover={{ y: -6 }}
             className="project-card"
           >
-            <div className="project-img-wrapper">
-              <motion.img
-                src={project.img}
-                alt={project.title}
-                whileHover={{ scale: 1.08 }}
-                transition={{ duration: 0.5 }}
-              />
-            </div>
+            <Image
+              src={project.img}
+              alt={project.title}
+              width={400}
+              height={250}
+            />
 
             <div className="project-overlay">
               <h3>{project.title}</h3>
               <p>{project.desc}</p>
 
               {project.live && (
-                <a
-                  href={project.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="live-btn"
-                >
+                <a href={project.live} target="_blank" rel="noopener noreferrer">
                   🚀 Live
                 </a>
               )}
             </div>
-
           </motion.div>
         ))}
       </motion.div>
 
     </div>
   );
-};
-
-export default Latepro;
+}
