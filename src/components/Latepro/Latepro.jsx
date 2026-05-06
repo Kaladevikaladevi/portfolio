@@ -62,14 +62,14 @@ const Latepro = () => {
             <div className="featured-image-wrapper">
               <motion.div
                 variants={fadeUp}
-                whileHover={{ y: -8 }}
+                whileHover={{ y: 8 }}
                 className="featured-card"
               >
                 <motion.img
                   src={featuredProject.img}
                   alt={featuredProject.title}
                   className="featured-img"
-                  whileHover={{ scale: 1 }}
+                  whileHover={{ scale: 11 }}
                   transition={{ duration: 0.5 }}
                 />
 

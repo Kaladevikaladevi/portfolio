@@ -5,7 +5,7 @@ import "./runanime.css";
 
 export default function RunAnime() {
   return (
-    <div className="home-container">
+    <div className="home-container" id="#intro">
       <div className="home">
         <div className="content">
           <h1>

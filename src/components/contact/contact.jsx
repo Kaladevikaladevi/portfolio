@@ -46,7 +46,7 @@ export default function Contact() {
         {/* LEFT SIDE */}
         <div className="contact-info">
           <h2 className="contact-title">
-            Get in <span>Touch</span>
+           𝐆𝐞𝐭 𝐢𝐧 <span>𝐓𝐨𝐮𝐜𝐡</span>
           </h2>
 
           <p className="contact-text">

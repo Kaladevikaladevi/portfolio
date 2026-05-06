@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section className="bg-black text-white min-h-screen px-6 py-16">
+    <section className="bg-black text-white min-h-screen px-6 py-16" >
       <div className="max-w-6xl mx-auto">
 
         {/* Heading */}
@@ -15,7 +15,7 @@ export default function About() {
           className="text-center mb-16"
         >
           <h1 className="text-5xl font-extrabold mb-4 tracking-wide">
-           𝐀𝐛𝐨𝐮𝐭 𝐌𝐞
+           𝐀𝐛𝐨𝐮𝐭 <span>𝐌𝐞</span> 
           </h1>
           <div className="w-24 h-1 bg-orange-400 mx-auto mb-6"></div>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">

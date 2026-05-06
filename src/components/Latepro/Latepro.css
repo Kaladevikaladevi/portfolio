@@ -25,7 +25,7 @@
 
 .text-area p {
   margin-top: 16px;
-  color: #bbb;
+  color: #ffffff;
   line-height: 1.7;
 }
 
@@ -35,14 +35,14 @@
   position: relative;
   overflow: hidden;
   border-radius: 16px;
-  border: 1px solid #1f1f1f;
+  border: 3px solid #e00000;
   transition: all 0.3s ease;
 }
 
 /* 🔥 GLOW EFFECT */
 .featured-card:hover,
 .project-card:hover {
-  border-color: orange;
+  border-color: rgb(0, 255, 242);
   box-shadow: 0 0 25px rgba(255, 165, 0, 0.25);
 }
 
@@ -65,7 +65,7 @@
 .project-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  background: linear-gradient(to top, rgba(255, 123, 0, 0.548), transparent);
   opacity: 0;
   transition: all 0.4s ease;
   display: flex;

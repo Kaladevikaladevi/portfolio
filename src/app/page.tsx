@@ -16,7 +16,7 @@ import FooterPage from "./footer/page";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="#intro">
       <Navbar />
 
       <section className={styles.hero}>

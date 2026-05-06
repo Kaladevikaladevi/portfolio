@@ -17,7 +17,7 @@ export default function Footer() {
         {/* LEFT */}
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}>
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">
-            Kaladevi<span className="text-orange-500">.NS</span>
+            𝐊𝐚𝐥𝐚𝐝𝐞𝐯𝐢<span className="text-orange-500">.𝐍𝐬</span>
           </h2>
 
           <p className="text-gray-400 mt-3 text-sm sm:text-base leading-relaxed">
