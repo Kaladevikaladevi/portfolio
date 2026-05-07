@@ -79,3 +79,8 @@ html, body {
   position: relative;
   z-index: 2;
 }
+
+
+html {
+  scroll-behavior: smooth;
+}
