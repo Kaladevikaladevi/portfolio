@@ -40,7 +40,11 @@ A modern, responsive **portfolio website** built using **Next.js**, showcasing m
 
 ## 📸 Screenshots
 
-*(Add screenshots of your website here)*
+***
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
+***
 
 ---
 
