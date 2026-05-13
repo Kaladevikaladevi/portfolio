@@ -1,6 +1,6 @@
 "use client";
 
-import "./Latepro.css";
+import "./latepro.css";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
