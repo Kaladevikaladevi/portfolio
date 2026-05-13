@@ -6,9 +6,16 @@ import Image from "next/image";
 
 const projects = [
   {
-    title: "AI Portfolio Builder",
-    desc: "Modern portfolio builder powered by AI.",
-    img: "/mernpic.png",
+    title: "Django Recipe CRUD Application",
+    desc: "Responsive recipe management app.",
+    img: "/recipecrud.png",
+    live: "https://django-recipe-crud.onrender.com/",
+  },
+  {
+    title: "Django Hospital Management System",
+    desc: "Comprehensive hospital management platform.",
+    img: "/hospital.png",
+    live: "https://project-5-hospitalmanagement.onrender.com/",
   },
   {
     title: "MERN CRUD App",
@@ -26,16 +33,23 @@ const projects = [
 const container = {
   hidden: {},
   show: {
-    transition: { staggerChildren: 0.15 },
+    transition: {
+      staggerChildren: 0.15,
+    },
   },
 };
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 50 },
+  hidden: {
+    opacity: 0,
+    y: 50,
+  },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7 },
+    transition: {
+      duration: 0.7,
+    },
   },
 };
 
@@ -46,61 +60,100 @@ export default function Latepro() {
   return (
     <div className="latepro-container">
 
+      {/* TOP SECTION */}
       <motion.div
         variants={container}
         initial="hidden"
         whileInView="show"
+        viewport={{ once: true }}
         className="latepro-left"
       >
-
         <div className="latepro-content-row">
 
-          {/* FEATURED */}
-          <motion.div variants={fadeUp} className="featured-card">
+          {/* FEATURED PROJECT */}
+          <motion.div
+            variants={fadeUp}
+            className="featured-card"
+          >
             <Image
               src={featuredProject.img}
               alt={featuredProject.title}
               width={500}
               height={300}
               className="featured-img"
+              priority
             />
 
             <div className="overlay">
               <h3>{featuredProject.title}</h3>
               <p>{featuredProject.desc}</p>
+
+              {featuredProject.live && (
+                <a
+                  href={featuredProject.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  🚀 Live
+                </a>
+              )}
             </div>
           </motion.div>
 
-          {/* TEXT */}
-          <motion.div variants={fadeUp} className="text-area">
-           <h1>𝐌𝐘 𝐋𝐀𝐓𝐄𝐒𝐓 <br />𝐏𝐑𝐎𝐉𝐄𝐂𝐓</h1>
+          {/* TEXT AREA */}
+          <motion.div
+            variants={fadeUp}
+            className="text-area"
+          >
+            <h1>
+              𝐌𝐘 𝐋𝐀𝐓𝐄𝐒𝐓 <br />
+              𝐏𝐑𝐎𝐉𝐄𝐂𝐓
+            </h1>
 
-              <p>
-                I design and build modern, scalable web applications with a strong focus on performance, usability, and clean architecture.
-                <br /><br />
+            <p>
+              I design and build modern, scalable web applications
+              with a strong focus on performance, usability,
+              and clean architecture.
 
-                ✦ <b>AI-Powered Developer Portfolio Builder</b> 🤖<br />
-                Built using Antigravity AI to help developers create stunning portfolios.
-                <br /><br />
+              <br /><br />
 
-                ✦ <b>MERN Stack E-Commerce Platform</b> 🛒<br />
-                Full-featured e-commerce app with Razorpay integration.
-                <br /><br />
+              ✦ <b>Django Hospital Management System</b> 🏥🩺
+              <br />
+              A complete hospital management platform with
+              patient records, doctor scheduling, appointments,
+              billing, and department management.
 
-                ✦ <b>MERN CRUD Application</b> ⚙️<br />
-                A responsive CRUD system with REST APIs.
-              </p>
+              <br /><br />
+
+              ✦ <b>MERN Stack E-Commerce Platform</b> 🛒
+              <br />
+              Full-featured e-commerce app with Razorpay integration.
+
+              <br /><br />
+
+              ✦ <b>Django Recipe CRUD Application</b> 🍲
+              <br />
+              A responsive recipe management app with create,
+              read, update, and delete functionality, including
+              image uploads and search features.
+
+              <br /><br />
+
+              ✦ <b>MERN CRUD Application</b> ⚙️
+              <br />
+              A responsive CRUD system with REST APIs.
+            </p>
           </motion.div>
 
         </div>
-
       </motion.div>
 
-      {/* GRID */}
+      {/* PROJECT GRID */}
       <motion.div
         variants={container}
         initial="hidden"
         whileInView="show"
+        viewport={{ once: true }}
         className="project-grid"
       >
         {gridProjects.map((project, index) => (
@@ -114,6 +167,7 @@ export default function Latepro() {
               alt={project.title}
               width={400}
               height={250}
+              className="project-img"
             />
 
             <div className="project-overlay">
@@ -121,7 +175,11 @@ export default function Latepro() {
               <p>{project.desc}</p>
 
               {project.live && (
-                <a href={project.live} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   🚀 Live
                 </a>
               )}

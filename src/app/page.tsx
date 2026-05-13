@@ -73,11 +73,6 @@ export default function Home() {
       </section>
 
 
-      <section id="about">
-        <AboutPage />
-      </section>
-
-
       <section id="education">
         <EducationPage />
       </section>
