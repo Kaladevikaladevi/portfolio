@@ -20,7 +20,7 @@ export default function Home() {
 
       <Navbar />
 
-      <section className={styles.hero}  id="intro">
+      <section className={styles.hero} id="intro">
 
         {/* 🔥 Antigravity Background */}
         <div className={styles.bgCanvas}>
