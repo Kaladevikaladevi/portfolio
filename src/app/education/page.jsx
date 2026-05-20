@@ -1,5 +1,5 @@
 'use client';
-import Education from "@/components/eduction/eduction";
+import Education from "@/components/education/education";
 
 
 export default function EducationPage() {
