@@ -1,11 +1,11 @@
 'use client';
 
-import LateproComponent from "@/components/Latepro/Latepro";
+import Latepro from "@/components/latepro/Latepro";
 
 export default function Latepro() {
     return (
         <div>
-            <LateproComponent />
+            <Latepro />
         </div>
     );
 }

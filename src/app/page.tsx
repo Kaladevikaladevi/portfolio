@@ -9,7 +9,7 @@ import RunAnimePage from "./runanime/page";
 import AboutPage from "@/components/about/about";
 import EducationPage from "@/components/education/education";
 import FrontendPro from "@/components/FrontendPro/FrontendPro";
-import Latepro from "@/components/Latepro/Latepro";
+import Latepro from "@/components/latepro/Latepro";
 import ContactPage from "./contact/page";
 import FooterPage from "./footer/page";
 
