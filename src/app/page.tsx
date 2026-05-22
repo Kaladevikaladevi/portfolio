@@ -9,7 +9,7 @@ import RunAnimePage from "./runanime/page";
 import AboutPage from "@/components/about/about";
 import EducationPage from "@/components/education/education";
 import FrontendPro from "@/components/FrontendPro/FrontendPro";
-import Latepro from "@/components/Latepro/Latepro";
+import Latestpro from "@/components/Latestpro/Latestpro";
 import ContactPage from "./contact/page";
 import FooterPage from "./footer/page";
 
@@ -80,7 +80,7 @@ export default function Home() {
 
       <section id="projects">
         <FrontendPro />
-        <Latepro />
+        <Latestpro />
       </section>
 
 

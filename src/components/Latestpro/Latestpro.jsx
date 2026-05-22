@@ -1,6 +1,6 @@
 "use client";
 
-import './latepro.css';
+import "./latestpro.css";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
