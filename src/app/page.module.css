@@ -11,7 +11,7 @@
   align-items: center;
   justify-content: center;
   height: 60vh;
-  gap: 1px;
+ 
   text-align: center;
 }
 
@@ -28,7 +28,7 @@
   font-size: 210px;
   font-weight: 900;
   letter-spacing: 6px;
-  margin-top: -20px;
+  margin-top: 70px;
 }
 
 /* PROFILE IMAGE */
@@ -124,7 +124,7 @@
   }
 
   .name {
-    font-size: 70px;
+    font-size: 62px;
     letter-spacing: 2px;
   }
 
@@ -145,7 +145,7 @@
 
   .dots {
     justify-content: center;
-    gap: 50px;
+    gap: 0px;
     margin-top: 10px;
   }
 }
