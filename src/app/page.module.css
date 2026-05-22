@@ -153,12 +153,12 @@
 /* EXTRA SMALL DEVICES */
 @media (max-width: 320px) {
   .name {
-    font-size: 36px;
+    font-size: 56px;
   }
 
   .profileImg {
-    width: 180px;
-    margin-top: 10;
+    width: 350px;
+    margin-top: -60;
   }
 
   .role_open h4 {

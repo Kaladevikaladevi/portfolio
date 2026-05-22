@@ -19,7 +19,7 @@ const projects = [
     title: "Portfolio Website",
     desc: "Minimal personal portfolio with animations and clean UI.",
     img: "./frontentportfoliopic.png",
-    live: ""
+    live: "https://portfolio-1msv.vercel.app/"
   },
 ];
 
