@@ -84,34 +84,53 @@
 /* TABLET */
 @media (max-width: 768px) {
   .hero {
-    padding-top: 80px;
+    padding-top: 280px;
   }
 
   .profileImg {
     width: 300px;
-    margin-top: -20px;
+    margin-top: -110px;
   }
 
   .role_open {
     margin-top: -20px;
+  }
+  .name {
+    font-size: 140px;
+    letter-spacing: 2px;
+  }
+  .role_open {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 0;
+  }
+
+  .role_open h4 {
+    font-size: 14px;
+  }
+
+  .dots {
+    justify-content: center;
+    gap: 50px;
+    margin-top: 10px;
   }
 }
 
 /* MOBILE */
 @media (max-width: 480px) {
   .hero {
-    gap: 20px;
+    margin-top: 20px;
     padding: 100px 15px 40px;
   }
 
   .name {
-    font-size: 48px;
+    font-size: 70px;
     letter-spacing: 2px;
   }
 
   .profileImg {
-    width: 220px;
-    margin-top: 0;
+    width: 300px;
+    margin-top: -70;
   }
 
   .role_open {
@@ -139,6 +158,7 @@
 
   .profileImg {
     width: 180px;
+    margin-top: 10;
   }
 
   .role_open h4 {
