@@ -43,7 +43,7 @@ export default function Home() {
           />
         </div>
 
-        <h1 className={styles.name}>𝗞𝗔𝗟𝗔𝗗𝗘𝗩𝗜</h1>
+        <h1 className={styles.name}>𝐊𝐀𝐋𝐀𝐃𝐄𝐕𝐈</h1>
 
         <Image
           src="/profile.png"

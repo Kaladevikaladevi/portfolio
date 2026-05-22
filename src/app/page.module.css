@@ -2,111 +2,85 @@
   background-color: #000;
   color: #fff;
   min-height: 100vh;
-  width: 100%;
-  overflow-x: hidden;
 }
 
 /* HERO SECTION */
 .hero {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  height: 60vh;
+  gap: 1px;
   text-align: center;
-  padding: 20px;
-  overflow: hidden;
 }
 
-/* BACKGROUND */
-.bgCanvas {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-}
+/* MERN IMAGE */
+/* .mernImg {
+  width: 150px;
+  height: auto;
+  animation: float 3s ease-in-out infinite;
+  margin-top: 9px;
+} */
 
 /* NAME */
 .name {
-  position: relative;
-  z-index: 2;
-  font-size: clamp(40px, 10vw, 210px);
+  font-size: 210px;
   font-weight: 900;
-  letter-spacing: 4px;
-  margin: 0;
-  line-height: 1;
-  word-break: break-word;
+  letter-spacing: 6px;
+  margin-top: -20px;
 }
 
 /* PROFILE IMAGE */
 .profileImg {
-  position: relative;
-  z-index: 2;
-  width: clamp(180px, 40vw, 450px);
+  width: 450px;
   height: auto;
-  margin-top: -40px;
+ margin-top: -160px;
+
+ 
 }
+
 
 /* ROLE SECTION */
 .role_open {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  max-width: 900px;
-
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
-
-  margin-top: -40px;
-  padding: 0 20px;
-  box-sizing: border-box;
+  justify-content: center;
+  gap: 640px;        /* reduced from 100 (too much space) */
+  margin-top: -350px;
 }
 
-.role_open h4 {
-  font-size: clamp(12px, 2vw, 20px);
+.role {
+  color: #ffffff;
   letter-spacing: 2px;
-  margin: 0;
+  font-weight: bold;
+}
+
+.open {
+  color: rgb(255, 255, 255);    /* better highlight */
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 /* DOTS */
 .dots {
-  position: relative;
-  z-index: 2;
-
-  width: 100%;
-  max-width: 900px;
-
   display: flex;
-  justify-content: space-between;
-
-  padding: 0 20px;
-  box-sizing: border-box;
-
+  justify-content: center;   /* center both */
+  gap: 1000px;                /* NOW it works */
   color: orange;
-  font-size: clamp(16px, 3vw, 24px);
-  margin-top: 30px;
+  font-size: 24px;
+    margin-top: 50px;
 }
 
-.dots h4 {
-  margin: 0;
-}
+
 
 /* FLOAT ANIMATION */
 @keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
 }
-
 /* TABLET */
 @media (max-width: 768px) {
   .hero {
