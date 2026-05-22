@@ -1,7 +1,6 @@
-'use client';
+"use client";
 
-
-import Latepro from "@/components/Latestpro/Latestpro";
+import Latestpro from "@/components/Latestpro/Latestpro";
 
 export default function Page() {
   return (
