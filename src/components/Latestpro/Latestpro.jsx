@@ -6,6 +6,12 @@ import Image from "next/image";
 
 const projects = [
   {
+    title: "E-Commerce Platform",
+    desc: "Full-featured e-commerce app.",
+    img: "/ecommerce_zyvora.png",
+    live: "https://zyvora-ecommerce-website.vercel.app/",
+  },
+  {
     title: "Django Recipe CRUD Application",
     desc: "Responsive recipe management app.",
     img: "/recipecrud.png",
@@ -18,15 +24,16 @@ const projects = [
     live: "https://project-5-hospitalmanagement.onrender.com/",
   },
   {
+    title: "Money Map",
+    desc: "Full-featured expense tracking app.",
+    img: "/MoneyMap.png",
+    live: "https://moneymap-flame.vercel.app/",
+  },
+  {
     title: "MERN CRUD App",
     desc: "CRUD app using MERN stack.",
     img: "/CRUD.png",
     live: "https://client-31s7.vercel.app/",
-  },
-  {
-    title: "E-Commerce Platform",
-    desc: "Full-featured e-commerce app.",
-    img: "/ecommerce.png",
   },
 ];
 
